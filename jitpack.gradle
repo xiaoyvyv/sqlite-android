@@ -1,0 +1,12 @@
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            try {
+                from components.release
+            } catch (ignored) {
+            }
+        }
+    }
+}
